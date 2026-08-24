@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login | MOTOX</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.login-screen{min-height:100vh;display:grid;grid-template-columns:1.2fr .8fr;background:#0b1120}
+.login-visual{display:flex;align-items:center;padding:8%;position:relative;color:#fff;background:linear-gradient(120deg,rgba(11,17,32,.92),rgba(11,17,32,.55)),url('https://commons.wikimedia.org/wiki/Special:FilePath/2015_Yamaha_YZF-R1.JPG?width=1200') center/cover no-repeat}
+.login-visual h1{font-size:clamp(55px,8vw,110px);line-height:.85;letter-spacing:-5px;color:#fff}
+.login-visual h1 span{color:#0ea5e9}
+.login-visual .eyebrow{color:#0ea5e9}
+.login-visual p{color:#cfd9e6;max-width:520px;margin-top:25px}
+.login-panel{display:flex;align-items:center;justify-content:center;padding:35px;background:#ffffff}
+.login-box{width:min(420px,100%);padding:40px;background:#ffffff;border:1px solid #dbe7f0;box-shadow:0 25px 70px rgba(11,17,32,.12);border-radius:10px}
+.login-logo{font-size:28px;font-weight:900;letter-spacing:3px;margin-bottom:35px;color:#0b1120}
+.login-logo span{color:#0ea5e9}
+.login-box h2{font-size:32px;margin-bottom:8px;color:#0b1120}
+.login-box .sub{color:#5b6472;margin-bottom:25px}
+.login-form{display:grid;gap:14px}
+.login-form label{font-size:12px;color:#5b6472}
+.login-form input{width:100%;margin-top:7px;background:#f2f8fc;color:#0b1120;border:1px solid #dbe7f0;padding:14px;outline:none;border-radius:4px}
+.login-form input:focus{border-color:#0ea5e9}
+.login-error{display:none;color:#b91c1c;background:#fdecec;border:1px solid #f3b4b4;padding:10px;font-size:13px;border-radius:4px}
+.demo{margin-top:20px;padding:13px;background:#f2f8fc;border:1px dashed #dbe7f0;color:#5b6472;font-size:12px;border-radius:4px}
+.register-link{margin-top:20px;color:#5b6472;font-size:13px}
+.register-link a{color:#0284c7}
+@media(max-width:800px){.login-screen{grid-template-columns:1fr}.login-visual{display:none}.login-panel{min-height:100vh}}
+</style>
+</head>
+<body>
+<main class="login-screen">
+<section class="login-visual">
+<div>
+<p class="eyebrow">WELCOME TO MOTOX</p>
+<h1>RIDE<br><span>BEYOND</span><br>LIMITS.</h1>
+<p>Sign in to access the complete MOTOX motorcycle showroom, bike details, comparison, customization, wishlist, cart and bookings.</p>
+</div>
+</section>
+<section class="login-panel">
+<div class="login-box">
+<div class="login-logo">MOTO<span>X</span></div>
+<h2>Welcome back</h2>
+<p class="sub">Login to enter the showroom.</p>
+<form id="gateLogin" class="login-form">
+<label>Email
+<input id="email" type="email" placeholder="Enter your email" required>
+</label>
+<label>Password
+<input id="password" type="password" placeholder="Enter your password" required>
+</label>
+<div id="loginError" class="login-error">Invalid login details.</div>
+<button class="btn" type="submit">Login to Showroom →</button>
+</form>
+<div class="demo">Demo login: <b>demo@motox.com</b> / <b>motox123</b></div>
+<p class="register-link">Don't have an account? <a href="register.html">Create account</a></p>
+</div>
+</section>
+</main>
+<script>
+document.getElementById("gateLogin").addEventListener("submit", function(e){
+  e.preventDefault();
+  const email=document.getElementById("email").value.trim();
+  const password=document.getElementById("password").value;
+  const error=document.getElementById("loginError");
+
+  const saved=JSON.parse(localStorage.getItem("motoxUser") || "null");
+  const validDemo=email==="demo@motox.com" && password==="motox123";
+  const validSaved=saved && saved.email===email && saved.password===password;
+
+  if(validDemo || validSaved){
+    localStorage.setItem("motoxLoggedIn","true");
+    if(!saved){
+      localStorage.setItem("motoxUser",JSON.stringify({
+        name:"MOTOX Rider",email:email,password:password
+      }));
+    }
+    const next=sessionStorage.getItem("motoxNext") || "index.html";
+    sessionStorage.removeItem("motoxNext");
+    location.replace(next);
+  }else{
+    error.style.display="block";
+  }
+});
+</script>
+</body>
+</html>

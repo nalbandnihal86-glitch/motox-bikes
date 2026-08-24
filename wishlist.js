@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{let w=JSON.parse(localStorage.getItem("motoxWishlist")||"[]").map(id=>bikes.find(b=>b.id===id)).filter(Boolean);document.getElementById("wishlist").innerHTML=w.length?`<div class="grid cards">${w.map(bikeCard).join("")}</div>`:`<div class="empty">Your wishlist is empty. Explore motorcycles and tap ♡ to save one.</div>`});

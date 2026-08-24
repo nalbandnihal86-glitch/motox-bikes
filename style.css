@@ -1,0 +1,117 @@
+:root{--ink:#0b1120;--ink-soft:#5b6472;--sky:#0ea5e9;--sky-dark:#0284c7;--sky-light:#e6f4fd;--paper:#ffffff;--paper-alt:#f2f8fc;--line:#dbe7f0;--dark:#0b1120;--dark-2:#111a2c}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}img{display:block;max-width:100%}
+.navbar{height:78px;position:fixed;top:0;left:0;width:100%;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:rgba(11,17,32,.95);backdrop-filter:blur(16px);border-bottom:1px solid #1c2740}
+.logo{font-size:27px;font-weight:900;letter-spacing:3px;color:#fff}.logo span{color:var(--sky)}
+.nav-links{display:flex;gap:20px}.nav-links a{font-size:13px;color:#9fb0c5}.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-actions{display:flex;gap:12px;align-items:center}.nav-icon{border:0;background:none;color:#fff;font-size:18px}
+.login-button{border:1px solid var(--sky);color:#fff;padding:8px 16px;border-radius:3px}
+.mobile-menu{display:none;background:none;color:#fff;border:0;font-size:25px}
+.hero{min-height:100vh;padding:150px 7% 80px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 30%,rgba(14,165,233,.14),transparent 45%),var(--paper)}
+.hero-copy{width:48%;z-index:2}
+.eyebrow{color:var(--sky-dark);font-size:11px;letter-spacing:4px;font-weight:700;margin-bottom:14px}
+.hero h1{font-size:clamp(55px,7vw,100px);line-height:.88;letter-spacing:-5px;color:var(--ink)}.hero h1 span{color:var(--sky)}
+.hero-copy>p:not(.eyebrow){color:var(--ink-soft);max-width:520px;margin:28px 0}
+.actions{display:flex;gap:12px}
+.btn{display:inline-block;background:var(--sky);color:#fff;border:0;padding:13px 22px;font-weight:700;border-radius:3px;cursor:pointer}
+.btn:hover{background:var(--sky-dark);transform:translateY(-2px)}
+.btn.ghost,.ghost{background:transparent;border:1px solid var(--ink);color:var(--ink)}
+.hero-bike{position:absolute;right:5%;top:14%;width:48%;height:62%;display:grid;place-items:center}
+.bike-placeholder,.hero-img{width:92%;aspect-ratio:16/10;border-radius:18px;overflow:hidden;filter:drop-shadow(0 25px 45px rgba(11,17,32,.25));transform:skew(-2deg)}
+.hero-img img{width:100%;height:100%;object-fit:cover;transform:skew(2deg) scale(1.08)}
+.stats{position:absolute;bottom:42px;right:8%;display:flex;gap:40px}
+.stats b{font-size:28px;color:var(--ink)}.stats small{display:block;color:var(--ink-soft);font-size:10px;letter-spacing:2px}
+.section,.page{padding:120px 7%}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}
+.section h2,.page-title h1{font-size:48px;line-height:1;color:var(--ink)}
+.section-head a{color:var(--sky-dark);font-weight:700}
+.grid{display:grid;gap:22px}.cards{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.3s;box-shadow:0 6px 18px rgba(11,17,32,.05)}
+.card:hover,.feature:hover{transform:translateY(-5px);border-color:var(--sky)}
+.card-image{height:270px;display:grid;place-items:center;background:var(--paper-alt);overflow:hidden}
+.card-image img{width:100%;height:100%;object-fit:cover}
+.fake-bike{font-size:26px;font-weight:900;letter-spacing:5px;color:var(--ink)}
+.card-body{padding:22px}.card-body p{color:var(--sky-dark);font-size:11px;letter-spacing:2px;font-weight:700}
+.card-body h3{font-size:23px;margin:5px 0;color:var(--ink)}
+.price{color:var(--ink-soft);display:block;margin-bottom:15px}
+.card-actions{display:flex;gap:8px}
+.small-btn{border:1px solid var(--line);padding:9px 12px;font-size:12px;color:var(--ink);background:var(--paper);border-radius:4px}
+.small-btn:hover{border-color:var(--sky);color:var(--sky-dark)}
+.banner{min-height:600px;padding:100px 7%;display:flex;align-items:center;position:relative;color:#fff;background:linear-gradient(90deg,rgba(11,17,32,.92) 20%,rgba(11,17,32,.65) 55%,rgba(11,17,32,.25)),url('https://commons.wikimedia.org/wiki/Special:FilePath/YAMAHA_YZF-R1_2007TMS.jpg?width=1600') center/cover no-repeat}
+.banner .eyebrow{color:var(--sky)}
+.banner h2,.cta h2{font-size:clamp(50px,6vw,90px);line-height:.9;margin-bottom:25px}
+.banner p:not(.eyebrow){color:#cfd9e6;margin-bottom:25px}
+.three{grid-template-columns:repeat(3,1fr);margin-top:35px}
+.feature{padding:35px;background:var(--paper);border:1px solid var(--line);border-radius:10px;transition:.3s}
+.feature>b{font-size:30px;color:var(--sky)}
+.feature h3{margin:15px 0 8px;color:var(--ink)}.feature p{color:var(--ink-soft)}
+.cta{text-align:center;padding:130px 7%;background:radial-gradient(circle,rgba(14,165,233,.14),transparent 60%)}
+.page{padding-top:140px;min-height:100vh}
+.page-title{margin-bottom:45px}.page-title p:not(.eyebrow){color:var(--ink-soft);margin-top:15px}
+.page-banner{width:100%;height:260px;object-fit:cover;border-radius:14px;margin-top:25px;border:1px solid var(--line)}
+.toolbar,.compare-select{display:flex;gap:12px;margin-bottom:30px;flex-wrap:wrap}
+.toolbar input,.toolbar select,.compare-select select,.form input,.form select,.form textarea,.panel select{background:var(--paper);color:var(--ink);border:1px solid var(--line);padding:13px;border-radius:4px}
+.toolbar input{flex:1;min-width:220px}.toolbar select,.compare-select select{min-width:170px}
+.narrow{max-width:800px;margin:auto}
+.form{display:grid;gap:15px}.form textarea{min-height:130px;resize:vertical}
+.form p{color:var(--ink-soft)}.form a{color:var(--sky-dark)}
+.detail{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+.detail-visual{min-height:450px;display:grid;place-items:center;background:var(--paper-alt);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.detail-visual img{width:100%;height:100%;object-fit:cover;min-height:450px}
+.detail-visual .fake-bike{font-size:50px}
+.detail h1{font-size:55px;color:var(--ink)}.detail-copy>p{color:var(--ink-soft);margin:20px 0}
+.specs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:30px 0}
+.spec{background:var(--paper-alt);border:1px solid var(--line);padding:18px;border-radius:8px}
+.spec b{display:block;font-size:22px;color:var(--ink)}.spec small{color:var(--ink-soft)}
+.table-wrap{overflow:auto}
+.compare-table{width:100%;border-collapse:collapse;min-width:700px}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:15px;text-align:left}
+.compare-table th{background:var(--dark);color:#fff}
+.customizer{display:grid;grid-template-columns:1.2fr .8fr;gap:30px}
+.custom-bike{min-height:520px;display:grid;place-items:center;background:var(--paper-alt);border:1px solid var(--line);border-radius:12px;font-size:70px;font-weight:900;letter-spacing:5px;color:var(--ink);overflow:hidden;position:relative}
+.custom-bike img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.custom-bike span{position:relative;z-index:2;background:rgba(11,17,32,.72);color:#fff;padding:14px 26px;border-radius:8px;font-size:26px;letter-spacing:2px}
+.panel{display:grid;gap:18px;background:var(--paper);border:1px solid var(--line);padding:30px;border-radius:10px}
+.panel label{display:grid;gap:8px;color:var(--ink-soft)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gallery-item{min-height:240px;display:grid;place-items:end;background:var(--paper-alt);border:1px solid var(--line);border-radius:10px;cursor:pointer;overflow:hidden;position:relative}
+.gallery-item img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:.3s}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-item span{position:relative;z-index:2;width:100%;padding:14px;background:linear-gradient(0deg,rgba(11,17,32,.85),transparent);color:#fff;font-weight:800;font-size:15px;letter-spacing:2px}
+.gallery-item:hover{border-color:var(--sky)}
+.dealer-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:25px}
+.dealer{padding:22px;background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-bottom:12px}
+.dealer h3{margin-bottom:5px;color:var(--ink)}.dealer p{color:var(--ink-soft)}
+.map-placeholder{min-height:500px;display:grid;place-items:center;text-align:center;background:var(--paper-alt);border:1px solid var(--line);border-radius:12px;color:var(--ink-soft);font-size:40px;overflow:hidden}
+.map-placeholder img{width:100%;height:100%;object-fit:cover;min-height:500px}
+.profile-card{padding:35px;background:var(--paper);border:1px solid var(--line);border-radius:10px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.avatar{display:inline-grid;place-items:center;width:60px;height:60px;border-radius:50%;background:var(--sky);color:#fff;font-size:25px;font-weight:bold}
+.profile-card p{color:var(--ink-soft)}
+.empty{padding:60px;text-align:center;border:1px dashed var(--line);color:var(--ink-soft)}
+.toast{position:fixed;right:20px;bottom:20px;background:var(--dark);color:#fff;padding:13px 18px;z-index:100;border-radius:6px;border:1px solid var(--sky)}
+.footer{background:var(--dark);color:#cfd9e6;border-top:1px solid #1c2740}
+.footer .logo{color:#fff}
+.footer-content{padding:70px 7%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand p,.footer-column a{color:#9fb0c5}
+.footer-column{display:flex;flex-direction:column;gap:10px}
+.footer-column h4{margin-bottom:8px;color:#fff}
+.footer-bottom{border-top:1px solid #1c2740;padding:22px 7%;display:flex;justify-content:space-between;color:#7f8fa6;font-size:12px}
+.search-overlay{position:fixed;inset:0;background:rgba(11,17,32,.95);z-index:100;display:none;place-items:center}
+.search-box{width:min(600px,90%);padding:35px;background:#111a2c;color:#fff;border:1px solid #24314d;border-radius:10px;position:relative}
+.search-box input{width:100%;padding:14px;background:#0b1120;color:#fff;border:1px solid #2a3752;margin:18px 0;border-radius:4px}
+.close{position:absolute;right:15px;top:10px;background:none;border:0;color:#fff;font-size:30px}
+@media(max-width:1000px){.nav-links{display:none}.mobile-menu{display:block}.nav-actions{margin-left:auto;margin-right:15px}.hero-copy{width:100%}.hero-bike{opacity:.35;width:80%;right:-10%}.cards,.three{grid-template-columns:repeat(2,1fr)}.footer-content{grid-template-columns:1fr 1fr}.detail,.customizer,.dealer-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.navbar{padding:0 5%}.nav-actions .nav-icon{display:none}.hero{padding:130px 5% 80px;min-height:850px}.hero h1{font-size:55px}.hero-bike{width:110%;right:-30%;top:35%}.stats{left:5%;right:auto;gap:22px}.actions{flex-direction:column}.section,.page{padding:90px 5%}.section h2,.page-title h1{font-size:38px}.cards,.three,.gallery{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:12px}.specs{grid-template-columns:repeat(2,1fr)}.detail h1{font-size:42px}.profile-card{flex-direction:column;align-items:flex-start}}
+
+/* MOTOX footer redesign: bike information only, no duplicate navigation */
+.footer-bike-info{grid-template-columns:2fr 1.2fr 1.1fr 1.1fr}
+.footer-note{margin-top:14px;max-width:430px;color:#8192a8}
+.footer-bike-column{display:flex;flex-direction:column;gap:10px}
+.footer-bike-column h4{color:#fff;margin-bottom:6px}
+.footer-bike-column p{color:#9fb0c5;font-size:13px}
+.footer-bike-column b{color:#e9f5ff}
+.wishlist-btn{min-width:100px}
+#accessories .card-image{background:linear-gradient(145deg,#eef5f9,#d8e6ee);padding:14px}
+#accessories .card-image img{object-fit:contain;mix-blend-mode:multiply;filter:contrast(1.04) saturate(1.05)}
+#accessories .card:hover .card-image img{transform:scale(1.035);transition:transform .35s ease}
+@media(max-width:1000px){.footer-bike-info{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.footer-bike-info{grid-template-columns:1fr}}
