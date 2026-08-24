@@ -1,112 +1,32 @@
-🏍️ MOTOX — Modern Motorcycle Marketplace
-A modern, responsive motorcycle website built with HTML, CSS, and JavaScript.
-MOTOX provides an interactive platform where users can explore motorcycles, compare models, customize bikes, view galleries, find dealers, book test rides, manage a cart/wishlist, and access motorcycle-related services.
-Project: MOTOX
-Type: Frontend Web Application / Static Website
-Deployment: GitHub Pages Ready
-Technologies: HTML5 • CSS3 • Vanilla JavaScript
-✨ Features
-🏠 Home
-Modern motorcycle-focused landing page
-Featured motorcycles and promotional sections
-Quick navigation to major website sections
-Responsive layout for desktop and mobile devices
-🏍️ Motorcycle Explorer
-Browse available motorcycles
-Motorcycle listing pages
-Detailed motorcycle information
-Gallery and model-specific details
-🔍 Compare Motorcycles
-Compare multiple motorcycles
-View important motorcycle information side-by-side
-Easy model selection for comparison
-🎨 Motorcycle Customization
-Interactive customization page
-Explore different customization options
-Dynamic JavaScript-based interactions
-🛒 Shopping & Wishlist
-Add motorcycles/accessories to cart
-Cart management
-Wishlist functionality
-Dedicated cart and wishlist pages
-📅 Bookings
-Test-ride booking interface
-Booking-related forms
-Service/booking pages for customer interaction
-🏪 Dealer Locator
-Dealer information page
-Dealer browsing interface
-Easy access to dealership-related information
-🖼️ Gallery
-Motorcycle image gallery
-Interactive gallery functionality
-Dedicated gallery page
-🔐 Authentication
-Login and registration pages
-Authentication-related JavaScript
-Auth-gate logic for protected frontend flows
-👤 Profile
-User profile interface
-User-related information and interactions
-🏷️ Offers & Services
-Offers/promotions page
-Motorcycle service page
-Customer-focused service sections
-📖 Stories
-Motorcycle stories/content section
-Dedicated page for motorcycle-related content
-🧰 Tech Stack
-Technology
-Purpose
-HTML5
-Website structure and pages
-CSS3
-Styling, layout, responsiveness and UI
-JavaScript (ES6+)
-Interactions and application logic
-Git & GitHub
-Version control and hosting
-GitHub Pages
-Static website deployment
-No backend server is required for the basic GitHub Pages deployment.
-📁 Project Structure
-MOTOX-GitHub-Pages-Ready/
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   ├── auth-gate.js
-│   ├── auth.js
-│   ├── cart.js
-│   ├── compare.js
-│   ├── customize.js
-│   ├── dealers.js
-│   ├── details.js
-│   ├── forms.js
-│   ├── gallery.js
-│   ├── main.js
-│   ├── motorcycles.js
-│   ├── shop.js
-│   └── wishlist.js
-│
-├── accessories.html
-├── bike-details.html
-├── bookings.html
-├── cart.html
-├── compare.html
-├── customize.html
-├── dealers.html
-├── gallery.html
-├── index.html
-├── login.html
-├── motorcycles.html
-├── offers.html
-├── profile.html
-├── register.html
-├── service.html
-├── stories.html
-├── test-ride.html
-├── wishlist.html
-│
-└── README.md
+# MOTOX Bike Showroom
+
+Pure HTML + CSS + JavaScript multi-page motorcycle showroom.
+
+## Pages
+Home, Motorcycles, Bike Details, Compare, Customize, Test Ride, Service, Accessories, Gallery, Dealers, Stories, Offers, Wishlist, Cart, Login, Register, Profile, Bookings.
+
+## Run
+Open `index.html` in VS Code with Live Server, or simply open it in a browser.
+
+## Important
+The project uses CSS/typographic motorcycle placeholders so it works without external image assets. Replace the `.fake-bike` blocks with your own motorcycle images later if desired.
+
+## Data
+Wishlist, cart, saved configuration, login demo, and bookings use browser localStorage. There is no backend/database because this version is intentionally HTML/CSS/JS only.
+
+## Login Gate
+No login gate is used. All pages can be opened directly.
+
+### Demo credentials
+- Email: `demo@motox.com`
+- Password: `motox123`
+
+A successful login creates a browser session using `localStorage`. The Logout button clears the session and returns to the login page. This is a front-end demo only; it is not a secure production authentication system.
+
+
+## Latest MOTOX UI changes
+- Removed the duplicate navigation-style links from the bottom footer.
+- Footer now shows motorcycle-focused details and MOTOX information only.
+- Replaced the accessory placeholder images with more realistic motorcycle-gear imagery.
+- The ♡ Wishlist button now saves the bike and opens its full bike-details page.
+- Added a clearer "♡ Wishlist" label to make the action obvious.
